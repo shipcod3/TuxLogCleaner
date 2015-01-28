@@ -5,7 +5,11 @@
 # greets to ROOTCON goons #
 ###########################
 
-import os, sys, time
+# the purpose of this script is to cover some of your tracks :)
+
+import os
+import sys
+import time
 
 print """
  _____                _                     _____  _                                 
@@ -95,7 +99,6 @@ def tux():
     answer = raw_input("y/n: ")
     
     if answer.lower() == 'y':
-        
         for log in logs:
             if os.path.isfile(log):
                 print "[***] Cleaning " +log
@@ -106,12 +109,11 @@ def tux():
         print "\n[***] Done sweeping \m/"
 
     else:
-        print "MMmkay!"
-        sys.exit()
+        sys.exit("MMmkay!")
     
 if __name__ == "__main__":
     if not os.geteuid() == 0:
-        sys.exit("Please run this script as root")
+        sys.exit("Please run this script as root!")
 
     else:
         tux()
