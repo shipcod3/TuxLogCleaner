@@ -6,6 +6,7 @@
 ###########################
 
 # the purpose of this script is to cover some of your tracks :)
+# root is needed to run this script
 
 import os
 import sys
